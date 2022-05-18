@@ -308,7 +308,7 @@ def detect_image(Yolo, image_path, output_path, input_size=416, show=False, CLAS
     if output_path != '': cv2.imwrite(output_path, image)
     if show:
         # Show the image
-        cv2.imshow("predicted image", image)
+        #cv2.imshow("predicted image", image)
         # Load and hold the image
         cv2.waitKey(0)
         # To close the window after the required kill value was provided
@@ -375,7 +375,7 @@ def Show_Image_mp(Processed_frames, show, Final_frames):
             image = Processed_frames.get()
             Final_frames.put(image)
             if show:
-                cv2.imshow('output', image)
+                #cv2.imshow('output', image)
                 if cv2.waitKey(25) & 0xFF == ord("q"):
                     cv2.destroyAllWindows()
                     break
@@ -495,7 +495,7 @@ def detect_video(Yolo, video_path, output_path, input_size=416, show=False, CLAS
         print("Time: {:.2f}ms, Detection FPS: {:.1f}, total FPS: {:.1f}".format(ms, fps, fps2))
         if output_path != '': out.write(image)
         if show:
-            cv2.imshow('output', image)
+            #cv2.imshow('output', image)
             if cv2.waitKey(25) & 0xFF == ord("q"):
                 cv2.destroyAllWindows()
                 break
@@ -559,7 +559,7 @@ def detect_realtime(Yolo, output_path, input_size=416, show=False, CLASSES=YOLO_
 
         if output_path != '': out.write(frame)
         if show:
-            cv2.imshow('output', frame)
+            #cv2.imshow('output', frame)
             if cv2.waitKey(25) & 0xFF == ord("q"):
                 cv2.destroyAllWindows()
                 break
