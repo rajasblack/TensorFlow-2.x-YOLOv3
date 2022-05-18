@@ -138,7 +138,8 @@ def Object_tracking(Yolo, video_path, output_path, input_size=416, show=False, C
         print("Time: {:.2f}ms, Detection FPS: {:.1f}, total FPS: {:.1f}".format(ms, fps, fps2))
         if output_path != '': out.write(image)
         if show:
-            cv2.imshow('output', image)
+            #cv2.imshow('output', image)
+            print("Rajesh")
             
             if cv2.waitKey(25) & 0xFF == ord("q"):
                 cv2.destroyAllWindows()
